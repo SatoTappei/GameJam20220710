@@ -17,18 +17,18 @@ public class RankScript : MonoBehaviour
     void Start()
     {
         _score = GameManager._gm.TotalScore;
-        if (_score < 100)
+        if (_score < 30)
         {
             Debug.Log("ƒƒ_ƒ‹‚È‚µ");
             _no.gameObject.SetActive(true);
             StartCoroutine(Bgm(1));
         }
-        else if (_score < 200)
+        else if (_score < 100)
         {
             _dou.gameObject.SetActive(true);
             StartCoroutine(Bgm(2));
         }
-        else if (_score < 250)
+        else if (_score < 200)
         {
             _gin.gameObject.SetActive(true);
             StartCoroutine(Bgm(3));
