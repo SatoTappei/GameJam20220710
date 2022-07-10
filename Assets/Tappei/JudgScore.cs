@@ -42,6 +42,10 @@ public class JudgScore : MonoBehaviour
                 //Debug.Log(hits[0].collider.name);
                 hits[0].collider.GetComponent<ScoreArea>().AddScore();
             }
+            else
+            {
+                GameManager._gm.AddScore(0);
+            }
             _activeNextButton.Invoke();
         }
 

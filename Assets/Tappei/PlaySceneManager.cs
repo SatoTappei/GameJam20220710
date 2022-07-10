@@ -27,7 +27,8 @@ public class PlaySceneManager : MonoBehaviour
     /// <summary>Ÿ‚ÌƒV[ƒ“‚ÖˆÚs</summary>
     public void MoveNextScene()
     {
-        string name = GameManager._gm.RoundScores.Count == 3 ? "Result" : "Play";
+        Debug.Log("RoundScores.Count:" + GameManager._gm.RoundScores.Count);
+        string name = GameManager._gm.RoundScores.Count >= 3 ? "Result" : "Play";
         SceneManager.LoadScene(name);
     }
 }
