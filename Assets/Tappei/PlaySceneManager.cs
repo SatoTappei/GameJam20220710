@@ -19,7 +19,7 @@ public class PlaySceneManager : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     public void ActiveNextButton() => _nextButton.SetActive(true);
@@ -29,6 +29,7 @@ public class PlaySceneManager : MonoBehaviour
     {
         Debug.Log("RoundScores.Count:" + GameManager._gm.RoundScores.Count);
         string name = GameManager._gm.RoundScores.Count >= 3 ? "Result" : "Play";
+        if (name == "Result") { Debug.Log("StopBGM"); GameManager._gm.StopBGM(); }
         SceneManager.LoadScene(name);
     }
 }

@@ -52,4 +52,14 @@ public class GameManager : MonoBehaviour
         RoundScores.Add(score);
         TotalScore += score;
     }
+
+    public void StartBGM()
+    {
+        GetComponent<AudioSource>().Play();
+    }
+
+    public void StopBGM()
+    {
+        GetComponent<AudioSource>().Stop();
+    }
 }

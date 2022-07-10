@@ -30,10 +30,7 @@ public class ChangeScene : MonoBehaviour
     {
         if (GameManager._gm != null)
         {
-            if (GameManager._gm.RoundScores.Count != 0)
-            {
-                GameManager._gm.ClearScore();
-            }
+            GameManager._gm.ClearScore();
         }
 
         while (_timer < _fadeTime)
@@ -49,6 +46,10 @@ public class ChangeScene : MonoBehaviour
             yield return new WaitForEndOfFrame();   // Update() の処理が終わるまで待つ
         }
         // フェード完了
+        if (GameManager._gm != null)
+        {
+            if (sceneName == "Play") GameManager._gm.StartBGM();
+        }
         SceneManager.LoadScene(sceneName);
     }
 }
