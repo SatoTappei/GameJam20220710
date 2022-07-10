@@ -28,6 +28,11 @@ public class ChangeScene : MonoBehaviour
 
     IEnumerator FadeIn(string sceneName)
     {
+        if(GameManager._gm.RoundScores.Count != 0)
+        {
+            GameManager._gm.ClearScore();
+        }
+        
         while (_timer < _fadeTime)
         {
             //タイマーを加算

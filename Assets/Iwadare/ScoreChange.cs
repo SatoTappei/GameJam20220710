@@ -14,6 +14,7 @@ public class ScoreChange : MonoBehaviour
     /// <param name="input">  </param>
     public void SetName(InputField input)
     {
+        input.text = GameManager._gm.TotalScore.ToString();
         _scoreString = input.text;
     }
 

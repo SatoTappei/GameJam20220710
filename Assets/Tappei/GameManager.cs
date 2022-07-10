@@ -17,6 +17,12 @@ public class GameManager : MonoBehaviour
     public List<int> RoundScores { get => _roundScores; private set => _roundScores = value; }
     public int TotalScore { get => _totalScore; private set => _totalScore = value; }
 
+
+    public void ClearScore()
+    {
+        _roundScores.Clear();
+    }
+
     void Awake()
     {
         if(_gm == null)
