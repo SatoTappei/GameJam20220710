@@ -5,20 +5,24 @@ using UnityEngine.UI;
 
 public class ScoreChange : MonoBehaviour
 {
+    //点数の保存保存先
     public static string _scoreString = "999999";
+    //スコアのテキスト
     [SerializeField] Text _scoreText;
+
+    /// <summary> スコアテキストを設定する </summary>
+    /// <param name="input">  </param>
     public void SetName(InputField input)
     {
         _scoreString = input.text;
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         _scoreText.text = _scoreString;
         Debug.Log(_scoreText.text);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
