@@ -65,7 +65,7 @@ public class StoneController : MonoBehaviour
         
         if(_rb.velocity.magnitude < _stopSpeed)
         {
-            Debug.Log("Ž~‚Ü‚Á‚½");
+            //Debug.Log("Ž~‚Ü‚Á‚½");
             _rb.velocity = Vector2.zero;
         }
     }

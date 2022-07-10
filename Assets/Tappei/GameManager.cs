@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     public void ClearScore()
     {
+        Debug.Log("newScore");
+        TotalScore = 0;
         _roundScores.Clear();
     }
 
@@ -43,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(TotalScore);
+        //Debug.Log(TotalScore);
     }
 
     /// <summary>Šl“¾‚µ‚½ƒXƒRƒA‚ð‰ÁŽZ</summary>
