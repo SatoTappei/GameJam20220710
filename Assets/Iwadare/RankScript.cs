@@ -16,7 +16,7 @@ public class RankScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _score = int.Parse(_scoreText.text);
+        _score = GameManager._gm.TotalScore;
         if (_score < 100)
         {
             Debug.Log("ƒƒ_ƒ‹‚È‚µ");
