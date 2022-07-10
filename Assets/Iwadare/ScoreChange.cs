@@ -18,8 +18,14 @@ public class ScoreChange : MonoBehaviour
         _scoreString = input.text;
     }
 
+    void Set_Score()
+    {
+        _scoreString= GameManager._gm.TotalScore.ToString();
+    }
+
     void Start()
     {
+        Set_Score();
         _scoreText.text = _scoreString;
         Debug.Log(_scoreText.text);
     }
